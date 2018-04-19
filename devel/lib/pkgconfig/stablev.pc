@@ -1,8 +1,0 @@
-prefix=/home/manupepermans/F1tenthRev2/devel
-
-Name: stablev
-Description: Description of stablev
-Version: 0.0.0
-Cflags: -I/home/manupepermans/F1tenthRev2/devel/include
-Libs: -L/home/manupepermans/F1tenthRev2/devel/lib 
-Requires: message_runtime

@@ -1,2 +1,0 @@
-stablev
--DCATKIN_DEVEL_PREFIX=/home/manupepermans/F1tenthRev2/devel -DCMAKE_INSTALL_PREFIX=/home/manupepermans/F1tenthRev2/install -G Unix Makefiles

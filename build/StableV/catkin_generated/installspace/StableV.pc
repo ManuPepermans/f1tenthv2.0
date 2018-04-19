@@ -1,8 +1,0 @@
-prefix=/home/manupepermans/F1tenthRev2/install
-
-Name: StableV
-Description: Description of StableV
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/manupepermans/F1tenthRev2/install/lib 
-Requires: 

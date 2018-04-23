@@ -1,0 +1,8 @@
+prefix=/home/jonas/Git/f1tenthv2.0/MAP2018/ROS/install
+
+Name: stablev
+Description: Description of stablev
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/jonas/Git/f1tenthv2.0/MAP2018/ROS/install/lib 
+Requires: move_base roscpp rospy std_msgs sensor_msgs geometry_msgs race

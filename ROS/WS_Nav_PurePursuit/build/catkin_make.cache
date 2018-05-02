@@ -1,0 +1,2 @@
+purepursuit
+-DCATKIN_DEVEL_PREFIX=/home/jonas/Git/MAP2018/ROS/WS_Nav_PurePursuit/devel -DCMAKE_INSTALL_PREFIX=/home/jonas/Git/MAP2018/ROS/WS_Nav_PurePursuit/install -G Unix Makefiles

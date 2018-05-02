@@ -1,0 +1,2 @@
+teb
+-DCATKIN_DEVEL_PREFIX=/home/jonas/Git/MAP2018/ROS/WS_Nav_TEB/devel -DCMAKE_INSTALL_PREFIX=/home/jonas/Git/MAP2018/ROS/WS_Nav_TEB/install -G Unix Makefiles

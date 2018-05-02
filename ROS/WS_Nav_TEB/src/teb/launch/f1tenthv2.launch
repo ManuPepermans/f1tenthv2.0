@@ -1,0 +1,12 @@
+<launch>
+   <node name="talker" type="talker.py" pkg="stablev" output="screen"/>
+   <node name="cornerFinder" type="cornerFinder.py" pkg="stablev" output="screen"/>
+   <node name="distFinder" type="distFinder.py" pkg="stablev" output="screen"/>
+   <node name="middleOfRoad" type="middleOfRoad.py" pkg="stablev" output="screen"/>
+   <node name="middleRoadControl" type="middleRoadControl.py" pkg="stablev" output="screen"/>
+   <node name="emergencyBrake" type="emergencyBrake.py" pkg="stablev" output="screen" launch-prefix="xterm -e"/>
+   <node name="keyboard" type="keyboard.py" pkg="stablev" output="screen" launch-prefix="xterm -e"/>
+   <node name="speedControl" type="speedControl.py" pkg="stablev" output="screen"/>
+   <node name="speedometer" type="speedometer.py" pkg="stablev" output="screen"/>
+   <node name="turn" type="turn.py" pkg="stablev" output="screen"/>
+</launch>

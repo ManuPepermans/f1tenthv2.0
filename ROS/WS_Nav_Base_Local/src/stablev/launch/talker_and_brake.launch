@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<launch>
+ 
+  <!-- launch emergency brake -->
+  <node name="navEmergencyBrake" type="navEmergencyBrake.py" pkg="stablev" output="screen" launch-prefix="xterm -e"/>
+
+  <!-- launch emergency brake controller -->
+  <node name="navBrakeControl" type="navBrakeControl.py" pkg="stablev" output="screen"/>
+
+  <!-- launch talker.py -->
+  <node name="talker" type="talker.py" pkg="stablev" output="screen"/>
+  
+</launch>

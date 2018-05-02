@@ -1,2 +1,0 @@
-stablev
--DCATKIN_DEVEL_PREFIX=/home/jonas/Git/MAP2018/ROS/WS_Nav/devel -DCMAKE_INSTALL_PREFIX=/home/jonas/Git/MAP2018/ROS/WS_Nav/install -G Unix Makefiles

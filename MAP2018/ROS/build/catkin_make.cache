@@ -1,2 +1,0 @@
-stablev
--DCATKIN_DEVEL_PREFIX=/home/jonas/Git/f1tenthv2.0/MAP2018/ROS/devel -DCMAKE_INSTALL_PREFIX=/home/jonas/Git/f1tenthv2.0/MAP2018/ROS/install -G Unix Makefiles

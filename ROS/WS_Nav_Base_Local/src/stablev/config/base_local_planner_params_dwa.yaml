@@ -1,4 +1,4 @@
-TrajectoryPlannerROS:
+0TrajectoryPlannerROS:
   # Set the acceleration limits of the robot
   acc_lim_x: 2.5
   acc_lim_y: 2.5
@@ -16,7 +16,7 @@ TrajectoryPlannerROS:
 
   # Tolerance on achieving a goal
   yaw_goal_tolerance: 0.05
-  xy_goal_tolerance: 0.10
+  xy_goal_tolerance: 0.20
 	
   # Configuring how long and with what granularity we forward simulate trajectories
   sim_time: 1.0
@@ -37,8 +37,7 @@ TrajectoryPlannerROS:
   occdist_scale: 0.01   #Weight for attemt to avoid obstacles
 
   # How far ahead the car can look in meters
-  heading_lookahead: 0.325
-
+  heading_lookahead: 3.0
   # Using the Dynamic Window Approach (DWA) to control or Trajectory Rollout
   dwa: true
 

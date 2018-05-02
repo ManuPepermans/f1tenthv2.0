@@ -21,7 +21,7 @@ TebLocalPlannerROS:
  min_turning_radius: 2.8 # turning radius for nonholonomic vehicles (v/omega > r_min)
  footprint_model: # types: "point", "circular", "two_circles", "line", "polygon"
    type: "line"
-   line_start: [-0.55, 0.0] # for type "line"
+   line_start: [-0.35, 0.0] # for type "line"
    line_end: [0.0, 0.0] # for type "line"
 
  # GoalTolerance
@@ -30,7 +30,7 @@ TebLocalPlannerROS:
  free_goal_vel: False
     
  # Obstacles
- min_obstacle_dist: 0.4 #Including vehicle width due to setting footprint to line
+ min_obstacle_dist: 0.25 #Including vehicle width due to setting footprint to line
  include_costmap_obstacles: True
  costmap_obstacles_behind_robot_dist: 1.5
  obstacle_poses_affected: 30

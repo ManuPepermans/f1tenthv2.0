@@ -16,7 +16,7 @@ TrajectoryPlannerROS:
 
   # Tolerance on achieving a goal
   yaw_goal_tolerance: 0.05
-  xy_goal_tolerance: 0.10
+  xy_goal_tolerance: 0.20
 	
   # Configuring how long and with what granularity we forward simulate trajectories
   sim_time: 1.0

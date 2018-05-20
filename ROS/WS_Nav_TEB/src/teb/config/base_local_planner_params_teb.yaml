@@ -13,11 +13,11 @@ TebLocalPlannerROS:
  allow_init_backward_motion: false 
     
  # Robot configuration parameters
- max_vel_x: 0.4
- max_vel_x_backwards: 0.2
- max_vel_theta: 0.3
- acc_lim_x: 0.5
- acc_lim_theta: 0.5
+ max_vel_x: 0.45
+ max_vel_x_backwards: 0
+ max_vel_theta: 1.0
+ acc_lim_x: 2.5
+ acc_lim_theta: 3.2
  min_turning_radius: 2.8 # turning radius for nonholonomic vehicles (v/omega > r_min)
  footprint_model: # types: "point", "circular", "two_circles", "line", "polygon"
    type: "line"
@@ -25,12 +25,13 @@ TebLocalPlannerROS:
    line_end: [0.0, 0.0] # for type "line"
 
  # GoalTolerance
- xy_goal_tolerance: 0.5
- yaw_goal_tolerance: 0.3
+ xy_goal_tolerance: 0.10
+ yaw_goal_tolerance: 0.05
  free_goal_vel: False
     
  # Obstacles
- min_obstacle_dist: 0.25 #Including vehicle width due to setting footprint to line
+ #Including vehicle width due to setting footprint to line
+ min_obstacle_dist: 0.5
  include_costmap_obstacles: True
  costmap_obstacles_behind_robot_dist: 1.5
  obstacle_poses_affected: 30
@@ -41,8 +42,6 @@ TebLocalPlannerROS:
  # Optimization
  no_inner_iterations: 3
  no_outer_iterations: 3
- optimization_activate: True
- optimization_verbose: False
  penalty_epsilon: 0.1
  weight_max_vel_x: 2
  weight_max_vel_theta: 1
@@ -57,17 +56,17 @@ TebLocalPlannerROS:
  alternative_time_cost: False # not in use yet
 
  # Homotopy Class Planner
- enable_homotopy_class_planning: True
+ enable_homotopy_class_planning: False
  enable_multithreading: True
  simple_exploration: False
  max_number_classes: 4
  selection_cost_hysteresis: 1.0
- selection_obst_cost_scale: 1.0
+ selection_obst_cost_scale: 100.0
  selection_alternative_time_cost: False
  roadmap_graph_no_samples: 15
- roadmap_graph_area_width: 5
- h_signature_prescaler: 0.5
+ roadmap_graph_area_width: 6
+ h_signature_prescaler: 1.0
  h_signature_threshold: 0.1
  obstacle_keypoint_offset: 0.1
- obstacle_heading_threshold: 0.45
+ obstacle_heading_threshold: 1.0
  visualize_hc_graph: False

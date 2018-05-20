@@ -1,0 +1,8 @@
+prefix=/home/jonas/Git/MAP2018/ROS/WS_Nav_EB/install
+
+Name: eb
+Description: Description of eb
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/jonas/Git/MAP2018/ROS/WS_Nav_EB/install/lib 
+Requires: 

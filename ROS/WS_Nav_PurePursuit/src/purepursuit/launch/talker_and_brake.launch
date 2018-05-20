@@ -3,12 +3,12 @@
 <launch>
  
   <!-- launch emergency brake -->
-  <node name="navEmergencyBrake" type="navEmergencyBrake.py" pkg="stablev" output="screen" launch-prefix="xterm -e"/>
+  <node name="navEmergencyBrake" type="navEmergencyBrake.py" pkg="purepursuit" output="screen" launch-prefix="xterm -e"/>
 
   <!-- launch emergency brake controller -->
-  <node name="navBrakeControl" type="navBrakeControl.py" pkg="stablev" output="screen"/>
+  <node name="navBrakeControl" type="navBrakeControl.py" pkg="purepursuit" output="screen"/>
 
   <!-- launch talker.py -->
-  <node name="talker" type="talker.py" pkg="stablev" output="screen"/>
+  <node name="talker" type="talker.py" pkg="purepursuit" output="screen"/>
   
 </launch>

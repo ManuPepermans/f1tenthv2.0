@@ -1,6 +1,6 @@
 TrajectoryPlannerROS:
   # Set the velocity limits of the robot
-  max_vel_x: 1.60
+  max_vel_x: 0.45
   min_vel_x: 0.1
   max_vel_theta: 1.0
   min_in_place_vel_theta: 0.4
@@ -14,31 +14,31 @@ TrajectoryPlannerROS:
   holonomic_robot: false
 
   # Tolerance on achieving a goal
-  yaw_goal_tolerance: 0.05
+  yaw_goal_tolerance: 6.05
   xy_goal_tolerance: 0.5
 	
   # Configuring how long and with what granularity we forward simulate trajectories
-  sim_time: 1.0
-  sim_granularity: 0.025
-  vx_samples: 3
-  vtheta_samples: 20
+  # sim_time: 1.0
+  # sim_granularity: 0.025
+  # vx_samples: 3
+  # vtheta_samples: 20
 
   # Says whether the scale parameters are assumed to be expressed in cells(false) or meters(true).
-  meter_scoring: true
+  # meter_scoring: true
 	
   # Forming costmap based on scale parameters
   # cost = pdist_scale * (distance to path from the endpoint of the trajectory in map cells or meters depending on the 	 meter_scoring parameter) + gdist_scale *    (distance to local goal from the endpoint of the trajectory in map cells or meters depending on the meter_scoring parameter) + occdist_scale * (maximum obstacle cost along the trajectory in obstacle cost (0-254))
 
   # Scale parameters
-  pdist_scale: 0.6	#Weight for staying close to the path
-  gdist_scale: 0.8	#Weight for attempting to reach local goal
-  occdist_scale: 0.01   #Weight for attemt to avoid obstacles
+  # pdist_scale: 0.6	#Weight for staying close to the path
+  # gdist_scale: 0.8	#Weight for attempting to reach local goal
+  # occdist_scale: 0.01   #Weight for attemt to avoid obstacles
 
   # How far ahead the car can look in meters
-  heading_lookahead: 0.325
+  heading_lookahead: 2.0
 
   # Using the Dynamic Window Approach (DWA) to control or Trajectory Rollout
-  dwa: true
+  dwa: false
 
   # How far the robot must travel before oscillation flags are reset
   oscillation_reset_dist: 0.05

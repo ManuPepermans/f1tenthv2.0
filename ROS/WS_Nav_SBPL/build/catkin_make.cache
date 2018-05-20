@@ -1,2 +1,0 @@
-sbpl
--DCATKIN_DEVEL_PREFIX=/home/jonas/Git/MAP2018/ROS/WS_Nav_SBPL/devel -DCMAKE_INSTALL_PREFIX=/home/jonas/Git/MAP2018/ROS/WS_Nav_SBPL/install -G Unix Makefiles

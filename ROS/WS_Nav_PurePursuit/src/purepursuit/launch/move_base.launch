@@ -7,7 +7,7 @@
 
 <!-- Global arguments -->
   <arg name="map_name" default="zbuilding.yaml"/>
-  <arg name="speed" default="3.0"/>
+  <arg name="speed" default="0.0"/>
 
 <!-- Argument names for amcl parameters-->
   <arg name="use_map_topic"   default="true"/>
@@ -30,7 +30,9 @@
   <param name="/use_sim_time" value="$(arg sim_time)"/>
 
 <!-- Map server -->
-  <node pkg="map_server" type="map_server" name="map_server" args="$(find stablev)/maps/$(arg map_name)"  output="screen" />
+  <node pkg="map_server" type="map_server" name="map_server" args="$(find purepursuit)/maps/$(arg map_name)"  output="screen" />
+
+  
 
 <!-- Hector node -->
   <node name="hector_mapping" pkg="hector_mapping" type="hector_mapping" output="screen">
@@ -71,8 +73,8 @@
   </node>
 
 <!-- Packages for odom from hector and amcl-->
-  <node pkg="stablev" type="hectorOdom" name="hectorOdom" output="screen"/>
-  <node pkg="stablev" type="amclOdom" name="amclOdom" output="screen"/>
+  <node pkg="purepursuit" type="hectorOdom" name="hectorOdom" output="screen"/>
+  <node pkg="purepursuit" type="amclOdom" name="amclOdom" output="screen"/>
 
 <!-- Amcl node -->
   <node pkg="amcl" type="amcl" name="amcl" output="screen">
@@ -126,41 +128,22 @@
     <!-- Internal parameters of move_base -->
 
     <param name="controller_frequency" value="15"/>
-    <!--<param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS" />-->
-    <param name="base_global_planner" value="global_planner/GlobalPlanner"/>
 
     <!-- External parameters of move_base -->
 
-    <rosparam file="$(find stablev)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
-    <rosparam file="$(find stablev)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
-    <rosparam file="$(find stablev)/config/local_costmap_params.yaml" command="load" />
-    <rosparam file="$(find stablev)/config/global_costmap_params.yaml" command="load" />
-    <rosparam file="$(find stablev)/config/base_local_planner_params.yaml" command="load" />
-    <rosparam file="$(find stablev)/config/global_planner_params.yaml" command="load" />
-  </node>
-
-<!-- move_base node -->
-  <node pkg="purepursuit_planner" type="move_base" respawn="false" name="move_base" output="screen">
-
-    <!-- Internal parameters of move_base -->
-
-    <param name="controller_frequency" value="15"/>
-    <!--<param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS" />-->
-    <param name="base_global_planner" value="global_planner/GlobalPlanner"/>
-
-    <!-- External parameters of move_base -->
-
-    <rosparam file="$(find stablev)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
-    <rosparam file="$(find stablev)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
-    <rosparam file="$(find stablev)/config/local_costmap_params.yaml" command="load" />
-    <rosparam file="$(find stablev)/config/global_costmap_params.yaml" command="load" />
-    <rosparam file="$(find stablev)/config/base_local_planner_params.yaml" command="load" />
-    <rosparam file="$(find stablev)/config/global_planner_params.yaml" command="load" />
+    <rosparam file="$(find purepursuit)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find purepursuit)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find purepursuit)/config/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find purepursuit)/config/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find purepursuit)/config/base_local_planner_params.yaml" command="load" />
+    <rosparam file="$(find purepursuit)/config/global_planner_params.yaml" command="load" />
   </node>
   
 <!-- Convertor from 'cmd_vel' to 'drive_param' -->
-  <node pkg="stablev" type="cmd_vel_to_drive_param.py" name="cmd_vel_to_drive_param" output="screen">
+  <node pkg="purepursuit" type="cmd_vel_to_drive_param.py" name="cmd_vel_to_drive_param" output="screen">
     <param name="speed" value="$(arg speed)"/>
   </node>
+
+  <!--<remap from="map" to="/map"/>-->
 
 </launch>

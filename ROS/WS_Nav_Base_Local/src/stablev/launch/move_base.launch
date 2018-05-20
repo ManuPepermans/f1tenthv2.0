@@ -7,7 +7,7 @@
 
 <!-- Global arguments -->
   <arg name="map_name" default="zbuilding.yaml"/>
-  <arg name="speed" default="3.0"/>
+  <arg name="speed" default="0.0"/>
 
 <!-- Argument names for amcl parameters-->
   <arg name="use_map_topic"   default="true"/>
@@ -125,8 +125,7 @@
 
     <!-- Internal parameters of move_base -->
 
-    <param name="controller_frequency" value="20"/> <!--The rate in Hz at which to run the control loop and send velocity commands to the base. -->
-    <param name="base_global_planner" value="global_planner/GlobalPlanner"/>
+    <param name="controller_frequency" value="10"/> <!--The rate in Hz at which to run the control loop and send velocity commands to the base. -->
 
     <!-- External parameters of move_base -->
 
@@ -136,6 +135,7 @@
     <rosparam file="$(find stablev)/config/global_costmap_params.yaml" command="load" />
     <rosparam file="$(find stablev)/config/base_local_planner_params_dwa.yaml" command="load" />
     <rosparam file="$(find stablev)/config/global_planner_params.yaml" command="load" />
+    <rosparam file="$(find stablev)/config/move_base_params.yaml" command="load" />
   </node>
   
 <!-- Convertor from 'cmd_vel' to 'drive_param' -->
